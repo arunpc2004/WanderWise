@@ -58,66 +58,51 @@ To run this project locally, follow these steps:
    git clone https://github.com/yourusername/WanderWise.git
    cd WanderWise
 2.Create a virtual environment (optional but recommended):
+pip install -r requirements.tx
 
-bash
-Copy
-Edit
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-Install dependencies:
+3. Install Tesseract OCR
+Download and install Tesseract OCR: Tesseract OCR
+After installation, update the path to Tesseract in app.py:
+pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
 
-bash
-Copy
-Edit
-pip install -r requirements.txt
-Install Tesseract:
-
-Download Tesseract OCR: Tesseract OCR
-Update the path to Tesseract in app.py:
-python
-Copy
-Edit
-pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"  # Windows example
-Run the Flask app:
-
-bash
-Copy
-Edit
-python app.py
-The app will be accessible at http://localhost:5000.
+3. Install Tesseract OCR
+Download and install Tesseract OCR: Tesseract OCR
+After installation, update the path to Tesseract in app.py:
+pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
 
 Features Implementation
-Image Language Translation
-Users can upload an image containing text.
-The image is processed using OpenCV to improve its quality.
-OCR (using pytesseract) is applied to extract text from the image.
-The detected text is translated into the target language using the Google Translator API.
-If the translation is successful, the translated text is displayed to the user.
-Real-Time Speech Conversion
-Users can speak into the microphone, and the speech is captured.
-The captured speech is recognized and converted to text using Speech Recognition.
-The recognized text is then translated into the target language.
-The translated text is converted back to speech using Google Text-to-Speech (gTTS), allowing the user to hear the translation.
-Cultural Insights
-The platform provides cultural insights related to the current travel destination, helping users explore historical and cultural facts.
-Travelmate Finder
-The platform includes a feature that helps users connect with other like-minded travelers for shared experiences during their trips.
-API Integration
-Google Vision API: Used for text extraction from images.
-Google Translator API: Provides real-time text translation in multiple languages.
-OpenWeatherMap API: Fetches weather data for the travel destination.
-Speech Recognition API: Used for converting speech to text.
-gTTS API: Converts the translated text back to speech.
-Running the Application
-Once you’ve set up the environment and installed all dependencies, you can run the application using the following command:
+1. Image Language Translation
+•	Users can upload an image containing text.
+•	The image is processed using OpenCV to enhance its quality.
+•	OCR (using pytesseract) is applied to extract text.
+•	The detected text is translated to the target language using the Google Translator API.
+•	If the translation is successful, the translated text is displayed.
+2. Real-Time Speech Conversion
+•	Users speak into the microphone, and their speech is captured.
+•	The captured speech is converted to text using Speech Recognition.
+•	The recognized text is translated into the target language using the Google Translator API.
+•	The translated text is converted back into speech using Google Text-to-Speech (gTTS), so users can hear the translation.
+3. Cultural Insights
+The platform offers cultural insights based on the current travel destination, helping users explore the historical and cultural significance of locations.
+4. Travelmate Finder
+A feature that connects like-minded travelers, allowing them to share experiences and plan together during their trips.
 
+API Integration
+•	Google Vision API: Used for text extraction from images.
+•	Google Translator API: Provides real-time text translation in multiple languages.
+•	OpenWeatherMap API: Fetches weather data for the travel destination.
+•	Speech Recognition API: Converts speech to text.
+•	gTTS API: Converts translated text back to speech.
+
+Running the Application
+Once you've set up the environment and installed all dependencies, run the application using:
 bash
-Copy
-Edit
+CopyEdit
 python app.py
-The application will start a Flask server at http://localhost:5000. You can access the various features (text scanning, voice translation, cultural insights, etc.) through the web interface.
+This will start a Flask server at http://localhost:5000. You can access features like text scanning, voice translation, cultural insights, and more directly through the web interface.
 
 Conclusion
-WanderWise brings together language translation, cultural knowledge, and social connectivity to simplify the travel experience. The platform helps bridge communication barriers, promotes cultural understanding, and facilitates interaction among travelers. It leverages modern technologies like OCR, speech recognition, and machine learning to create a seamless experience for users.
-
-Future updates may include offline functionality and a mobile app version to extend the platform’s reach.
+WanderWise brings together language translation, cultural knowledge, and social connectivity to enhance the travel experience. The platform bridges communication gaps, promotes cultural understanding, and connects travelers from around the world. By integrating cutting-edge technologies such as OCR, speech recognition, and AI-driven language translation, it creates a seamless experience for users.
+Future Updates:
+•	Offline functionality for real-time translation.
+•	Mobile app version for a broader reach.
