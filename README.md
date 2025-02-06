@@ -1,7 +1,7 @@
 # WanderWise - Your One-Stop Travel Companion
 
 ### Authors:
-[Your Name(s)]
+[NANDAN KRISHNA]
 
 ---
 
