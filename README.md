@@ -86,25 +86,26 @@ pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tessera
 The platform offers cultural insights based on the current travel destination, helping users explore the historical and cultural significance of locations.
 4. Travelmate Finder
 A feature that connects like-minded travelers, allowing them to share experiences and plan together during their trips.
----
+
 ## API Integration
 •	Google Vision API: Used for text extraction from images.
 •	Google Translator API: Provides real-time text translation in multiple languages.
 •	OpenWeatherMap API: Fetches weather data for the travel destination.
 •	Speech Recognition API: Converts speech to text.
 •	gTTS API: Converts translated text back to speech.
----
+
 ## Running the Application
 
 Once you've set up the environment and installed all dependencies, run the application using:
 python app.py
 This will start a Flask server at http://localhost:5000. You can access features like text scanning, voice translation, cultural insights, and more directly through the web interface.
+
 ---
 ## Conclusion
 
 WanderWise brings together language translation, cultural knowledge, and social connectivity to enhance the travel experience. The platform bridges communication gaps, promotes cultural understanding, and connects travelers from around the world. By integrating cutting-edge technologies such as OCR, speech recognition, and AI-driven language translation, it creates a seamless experience for users.
 
----
+
 
 ## Future Updates:
 •	Offline functionality for real-time translation.
