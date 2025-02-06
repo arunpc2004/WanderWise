@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Mate Finder - WanderWise</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* General Styling */
+        body {
+            font-family: 'Book Antiqua', serif;
+            background-color: #EAE7DC;
+            color: #8E8D8A;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background: #D8C3A5;
+            border-bottom: 1px solid #E85A4F;
+        }
+
+        header .logo {
+            font-size: 24px;
+            color: #E98074;
+            font-weight: bold;
+        }
+
+        nav a {
+            color: #8E8D8A;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        nav a:hover {
+            color: #E85A4F;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 80px 20px;
+            background: #EAE7DC;
+        }
+
+        .hero h1 {
+            font-size: 50px;
+            margin-bottom: 20px;
+            color: #E85A4F;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: #8E8D8A;
+        }
+
+        /* Travel Mate Finder Section */
+        .travelmate-finder {
+            padding: 60px 20px;
+            background-color: #EAE7DC;
+            text-align: center;
+        }
+
+        .travelmate-finder h2 {
+            font-size: 36px;
+            margin-bottom: 40px;
+            color: #E98074;
+        }
+
+        .search-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .search-form input, 
+        .search-form select, 
+        .search-form button {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #D8C3A5;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .search-form button {
+            background-color: #E85A4F;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .search-form button:hover {
+            background-color: #E98074;
+        }
+
+        /* Featured Travelmates */
+        .featured-travelmates {
+            padding: 60px 20px;
+            background-color: #EAE7DC;
+        }
+
+        .featured-travelmates h2 {
+            font-size: 36px;
+            margin-bottom: 40px;
+            color: #E98074;
+            text-align: center;
+        }
+
+        .travelmate-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            justify-content: center;
+        }
+
+        .travelmate-item {
+            width: 300px;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .travelmate-item h3 {
+            font-size: 18px;
+            color: #E85A4F;
+            margin-bottom: 10px;
+        }
+
+        .travelmate-item p {
+            font-size: 14px;
+            color: #8E8D8A;
+            line-height: 1.5;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #D8C3A5;
+            color: #333;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        footer p {
+            font-size: 16px;
+            color: #8E8D8A;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">WanderWise</div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="cultural-insights.html">Cultural Insights</a>
+            <a href="must-visit.html">Must-Visit Spots</a>
+            <a href="user-reviews.html">User Reviews</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Find Your Perfect Travel Mate</h1>
+        <p>Connect with like-minded travelers and share unforgettable journeys!</p>
+    </section>
+
+    <section class="travelmate-finder">
+        <h2>Search for Travel Mates</h2>
+        <div class="search-form">
+            <form action="search-results.html" method="GET">
+                <input type="text" name="destination" placeholder="Enter destination" required>
+                <input type="date" name="travel-date" required>
+                <select name="interests" required>
+                    <option value="">Select Interest</option>
+                    <option value="adventure">Adventure</option>
+                    <option value="cultural">Cultural Exploration</option>
+                    <option value="nature">Nature and Wildlife</option>
+                    <option value="history">Historical Sites</option>
+                </select>
+                <button type="submit">Find Travel Mate</button>
+            </form>
+        </div>
+    </section>
+
+    <section class="featured-travelmates">
+        <h2>Featured Travel Mates</h2>
+        <div class="travelmate-list">
+            <!-- Travelmate 1 -->
+            <div class="travelmate-item">
+                <h3>Emily White</h3>
+                <p>Looking for a travel buddy to explore the beaches of Thailand. Interests: Adventure, Nature.</p>
+            </div>
+            <!-- Travelmate 2 -->
+            <div class="travelmate-item">
+                <h3>John Taylor</h3>
+                <p>Seeking a cultural explorer to visit Italy and learn its history. Interests: Cultural, History.</p>
+            </div>
+            <!-- Travelmate 3 -->
+            <div class="travelmate-item">
+                <h3>Alice Brown</h3>
+                <p>Join me on a nature-filled trip to the Swiss Alps! Interests: Nature, Adventure.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2024 WanderWise. All rights reserved.</p>
+    </footer>
+</body>
+</html>

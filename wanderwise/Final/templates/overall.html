@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Simplify your travel with WanderWise. Real-time translation, cultural insights, must-visit recommendations, and more for an enhanced travel experience.">
+    <title>WanderWise - Your One-Stop Travel Companion</title>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Book Antiqua', serif;
+    background-color: #EAE7DC;
+    color: #8E8D8A;
+    line-height: 1.6;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: #D8C3A5;
+    border-bottom: 2px solid #E85A4F; /* Thicker border */
+    position: sticky; 
+    top: 0; 
+    z-index: 1000; 
+}
+
+header .logo {
+    font-size: 24px;
+    color: #E98074;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    gap: 15px;
+}
+
+nav a {
+    color: blue; /* New color for navigation links */
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #E85A4F; /* Hover color for links */
+}
+
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(to bottom, #D8C3A5, #EAE7DC);
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: #E85A4F;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #E85A4F; 
+    color: #fff; 
+    text-decoration: none; 
+    border-radius: 25px; 
+    font-size: 18px; 
+    transition: background-color 0.3s ease, transform 0.2s ease; 
+}
+
+.cta-button:hover {
+    background-color: #E98074; 
+    transform: translateY(-2px); 
+}
+
+.highlighted-features,
+.features,
+.map-section,
+.traveler-thoughts,
+.travel-media,
+.blogs,
+.cta-section {
+    padding: 40px 20px;
+    text-align: center; 
+}
+
+.highlighted-features { background-color: #F5F5F5; }
+.features { background-color: #EAE7DC; }
+.map-section { background-color: #D8C3A5; }
+.traveler-thoughts { background-color: #F5F5F5; }
+.travel-media { background-color: #EAE7DC; }
+.blogs { background-color: #F5F5F5; }
+.cta-section { background-color: #EAE7DC; }
+
+.highlighted-feature-list,
+.feature-list,
+.thoughts-list,
+.media-list,
+.blog-list {
+   display: grid; 
+   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+   gap: 20px; 
+   margin-top: 20px; 
+} 
+
+.highlighted-feature-item,
+.feature-item,
+.thought-item,
+.media-item,
+.blog-item { 
+   padding: 20px; 
+   background-color: #FFFFFF; /* White background for boxes */
+   border-radius: 15px; /* More rounded corners */
+   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); /* Deeper shadow effect */
+   transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition for shadow on hover */
+} 
+
+.highlighted-feature-item:hover,
+.feature-item:hover,
+.thought-item:hover,
+.media-item:hover,
+.blog-item:hover { 
+   transform: scale(1.05); 
+   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25); /* Increased shadow on hover */
+} 
+
+h2 { 
+   margin-bottom: 20px; 
+   color: #E85A4F; 
+} 
+
+footer { 
+   background-color: #D8C3A5; 
+   padding: 20px; 
+   text-align: center; 
+} 
+
+footer p { 
+   color: #8E8D8A; 
+   font-size: 14px; 
+} 
+
+@media (max-width: 768px) { 
+   .hero h1 { font-size: 36px; } 
+
+   nav a { font-size: 14px; } 
+
+   .map { height: auto; } 
+
+   .thought-item img, .media-item img { height:auto; max-width :100%; } /* Responsive images */
+} 
+
+@media (max-width: 480px) { 
+   header { flex-direction: column; } 
+
+   nav { justify-content: center; } 
+
+   h2 { font-size: 24px; } 
+
+   .cta-button { padding: 10px 15px; font-size: 14px; } 
+}
+
+
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">WanderWise</div>
+    <nav>
+        <a href="#features">Features</a>
+        <a href="#map">Explore</a>
+        <a href="#thoughts">Traveler Thoughts</a>
+        <a href="#media">Travel Media</a>
+        <a href="#blogs">Blogs</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h1>Welcome to WanderWise</h1>
+    <p>Your ultimate travel companion for a seamless journey.</p>
+    
+</section>
+
+<section class="highlighted-features">
+    <h2>Main Features</h2>
+    <div class="highlighted-feature-list">
+        <div class="highlighted-feature-item">
+            <h3>Real-Time Speech Conversion</h3>
+            <p>Effortlessly translate speech in real-time to communicate with ease during your travels.</p>
+            <a href="/process" class="cta-button">Learn More</a>
+        </div>
+        <div class="highlighted-feature-item">
+            <h3>Image to Text Translation</h3>
+            <p>Simply scan signs or text with your camera to instantly translate text in real-time.</p>
+            <a href="/scan" class="cta-button">Learn More</a>
+        </div>
+    </div>
+</section>
+
+<section class="features" id="features">
+    <h2>Other Features</h2>
+    <div class="feature-list">
+        <div class="feature-item">
+            <h3>Cultural Insights</h3>
+            <p>Learn about the cultural history and significance of your destination.</p>
+            <a href="/cultural-insights" class="cta-button">Explore</a>
+        </div>
+        <div class="feature-item">
+            <h3>Must-Visit Spots</h3>
+            <p>Discover popular attractions and hidden gems at your destination.</p>
+            <a href="/must-visit" class="cta-button">Discover</a> <!-- Updated link -->
+        </div>
+        <div class="feature-item">
+            <h3>User Reviews</h3>
+            <p>Read recommendations and reviews from fellow travelers.</p>
+            <a href="/reviews" class="cta-button">Read Reviews</a> <!-- Updated link -->
+        </div>
+        <div class="feature-item">
+            <h3>Travelmate Finder</h3>
+            <p>Find like-minded travelers to share your journey with.</p>
+            <a href="/travelmate-finder" class="cta-button">Find a Mate</a> <!-- Updated link -->
+        </div>
+    </div>
+</section>
+
+<section class="map-section" id="map">
+    <h2>Explore Must-Visit Destinations</h2>
+    <iframe src="https://www.google.com/maps/embed" class="map" allowfullscreen></iframe>
+</section>
+
+<section class="traveler-thoughts" id="thoughts">
+    <h2>Thoughts Shared by Travelers</h2>
+    <div class="thoughts-list">
+        <div class="thought-item">
+            <img src="static/images/bali.png" alt="Traveler Thought">
+            <h3>John Doe</h3>
+            <p>"The beaches in Bali were breathtaking! A must-visit destination for anyone who loves nature."</p>
+        </div>
+        <div class="thought-item">
+            <img src="/static/images/sushi.png" alt="Traveler Thought">
+            <h3>Jane Smith</h3>
+            <p>"I had the best sushi experience in Tokyo. Can't wait to go back!"</p>
+        </div>
+    </div>
+</section>
+
+<section class="travel-media" id="media">
+    <h2>Travel Media</h2>
+    <div class="media-list">
+        <div class="media-item">
+            <img src="static/images/thumbnail.jpeg" alt="Travel Video">
+            <h3>Exploring Venice</h3>
+            <p>"A video journey through the canals of Venice."</p>
+        </div>
+        <div class="media-item">
+            <img src="static/images/foodthumbnail.jpeg" alt="Best Food Spots">
+            <h3>Top Food Spots in Paris</h3>
+            <p>"Indulge in the best croissants and pastries in Paris!"</p>
+        </div>
+    </div>
+</section>
+
+<section class="blogs" id="blogs">
+    <h2>Traveler Blogs</h2>
+
+    <!-- Example Blog Item -->
+    <div class="blog-item">
+        <h3>Blog Title Example</h3> 
+       <p>"Explore exciting journeys, from the land of fire and ice to the vibrant streets of Bangkok!" 
+       <a href="/blog" class='cta-button'>Read More</a></p></div>
+
+   <h3>Upload Your Blog</h3> 
+   <form action="/upload-blog" method='post' enctype='multipart/form-data'> 
+      <input type='text' name='blog-title' placeholder='Blog Title' required><br><br> 
+      <textarea name='blog-content' placeholder='Write your blog here...' rows='5' required></textarea><br><br> 
+      <input type='file' name='blog-image' accept='image/*'><br><br> 
+      <button type='submit' class='cta-button'>Upload Blog</button></form></section>
+
+<section class="cta-section">
+    <h2>Join Thousands of Wanderers</h2>
+    <p>Follow us on social media and reach out for any travel queries. Available 24/7 to assist you.</p>
+    <!-- Assuming there is a signup section -->
+    <!-- Update this link if you have a specific signup page -->
+    <!-- Add an ID for signup if needed -->
+    <!-- For now linking back to home as placeholder -->
+    <!-- Replace with actual signup link if available -->
+    <!-- Example below -->
+    
+   <a href="#signup" class='cta-button'>Sign Up Now!</a></section>
+
+<footer>
+   <p>&copy; 2024 WanderWise. All rights reserved.</p></footer>
+
+<!-- Add any necessary scripts here -->
+
+<script src=""></script>
+
+<!-- End of body and html tags -->
+   
+   </body></html>

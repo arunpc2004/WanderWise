@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Must-Visit Spots - WanderWise</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* General Styling */
+        body {
+            font-family: 'Book Antiqua', serif;
+            background-color: #EAE7DC;
+            color: #8E8D8A;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background: #D8C3A5;
+            border-bottom: 1px solid #E85A4F;
+        }
+
+        header .logo {
+            font-size: 24px;
+            color: #E98074;
+            font-weight: bold;
+        }
+
+        nav a {
+            color: #8E8D8A;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        nav a:hover {
+            color: #E85A4F;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 80px 20px;
+            background: #EAE7DC;
+        }
+
+        .hero h1 {
+            font-size: 50px;
+            margin-bottom: 20px;
+            color: #E85A4F;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: #8E8D8A;
+        }
+
+        /* Must-Visit Spots Section */
+        .must-visit {
+            padding: 60px 20px;
+            background-color: #EAE7DC;
+            text-align: center;
+        }
+
+        .must-visit h2 {
+            font-size: 36px;
+            margin-bottom: 40px;
+            color: #E98074;
+        }
+
+        .spot-list {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+
+        .spot-item {
+            width: 300px;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .spot-item:hover {
+            transform: scale(1.05);
+        }
+
+        .spot-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        .spot-item h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: #E85A4F;
+        }
+
+        .spot-item p {
+            font-size: 14px;
+            color: #8E8D8A;
+            line-height: 1.5;
+        }
+
+        /* Footer Styling */
+        footer {
+            background-color: #D8C3A5;
+            color: #333;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        footer p {
+            font-size: 16px;
+            color: #8E8D8A;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">WanderWise</div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="cultural-insights.html">Cultural Insights</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Must-Visit Spots</h1>
+        <p>Explore the world’s most iconic landmarks and hidden gems, handpicked for the adventurer in you.</p>
+    </section>
+
+    <section class="must-visit">
+        <h2>Explore These Iconic Spots</h2>
+        <div class="spot-list">
+            <!-- Spot 1 -->
+            <div class="spot-item">
+                <img src="static/images/subhramanya.webp" alt="Subrahmanya">
+                <h3>Sri Shanmukha Subrahmanya Sri Maha Vishnu Temple</h3>
+                <p>Sri Shanmukha Subrahmanya Sri Maha Vishnu Temple is located in Puttur taluk, Dakshina Kannada district of Karnataka state in India. Here Lord Kartikeya is worshipped as Shanmukha Subrahmanya, lord of all serpents and Lord Maha Vishnu as main deities.</p>
+            </div>
+            <!-- Spot 2 -->
+            >
+            <!-- Spot 3 -->
+            <div class="spot-item">
+                <img src="static/images/great-wall.jpg" alt="Great Wall of China">
+                <h3>Great Wall of China</h3>
+                <p>A majestic structure spanning thousands of miles, rich with history and awe-inspiring views.</p>
+            </div>
+            <!-- Spot 4 -->
+            <div class="spot-item">
+                <img src="static/images/aurora.jpg" alt="Northern Lights">
+                <h3>Northern Lights, Iceland</h3>
+                <p>Nature's stunning light show, best viewed in the Arctic skies during winter nights.</p>
+            </div>
+            <!-- Spot 5 -->
+            <div class="spot-item">
+                <img src="static/images/santorini.jpg" alt="Santorini">
+                <h3>Santorini, Greece</h3>
+                <p>Renowned for its white-washed buildings, blue domes, and spectacular sunsets.</p>
+            </div>
+            <div class="spot-item">
+                <img src="static/images/sriram.jpeg" alt="Grand Canyon">
+                <h3>Ram Mandir,Ayodhya, Uttar Pradesh</h3>
+                <p>The Ayodhya Ram Mandir is a sacred Hindu temple located in Ayodhya, Uttar Pradesh, India.</p>
+            </div>
+        </div>
+
+    </section>
+
+    <footer>
+        <p>© 2024 WanderWise. All rights reserved.</p>
+    </footer>
+</body>
+</html>

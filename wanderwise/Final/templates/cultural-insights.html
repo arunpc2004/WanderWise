@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cultural Insights - WanderWise</title>
+    <style>
+        /* General styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Book Antiqua', serif;
+            background-color: #EAE7DC;
+            color: #8E8D8A;
+        }
+
+        header {
+            background-color: #D8C3A5;
+            padding: 20px;
+            text-align: center;
+            color: #E98074;
+        }
+
+        header h1 {
+            font-size: 36px;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .section-header h2 {
+            font-size: 36px;
+            color: #E98074;
+            margin-bottom: 10px;
+        }
+
+        .section-header p {
+            font-size: 18px;
+            color: #8E8D8A;
+        }
+
+        /* Image gallery styles */
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .gallery img {
+            width: 300px;
+            height: 200px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Feature list styles */
+        .list {
+            margin-top: 20px;
+            list-style-type: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .list-item {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .list-item img {
+            width: 100%;
+            height: 150px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        .list-item h3 {
+            color: #E85A4F;
+            font-size: 20px;
+        }
+
+        .list-item p {
+            font-size: 14px;
+            color: #8E8D8A;
+        }
+
+        /* Footer styles */
+        footer {
+            background-color: #D8C3A5;
+            color: #333;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        footer p {
+            font-size: 16px;
+            color: #8E8D8A;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Explore Cultural Insights</h1>
+        <p>Immerse yourself in the traditions, history, and beauty of global cultures.</p>
+    </header>
+
+    <main>
+        <!-- Overview Section -->
+        <section>
+            <div class="section-header">
+                <h2>Overview</h2>
+                <p>Understanding the culture of your destination adds depth to your travel experience.</p>
+            </div>
+        </section>
+
+        <!-- Image Gallery Section -->
+        <section>
+            <div class="section-header">
+                <h2>Cultural Gallery</h2>
+                <p>A visual journey through traditions, art, and festivals.</p>
+            </div>
+            <div class="gallery">
+                <img src="static/images/navarathri.webp" alt="Festival">
+                <img src="static/images/traditionalart.webp" alt="Traditional Art">
+                <img src="static/images/hydrabad.jpg" alt="Architecture">
+                <img src="static/images/coldplay.avif" alt="Music Performance">
+            </div>
+        </section>
+
+        <!-- Cultural Categories -->
+        <section>
+            <div class="section-header">
+                <h2>Cultural Categories</h2>
+                <p>Explore the richness of culture through these key elements.</p>
+            </div>
+            <ul class="list">
+                <li class="list-item">
+                    <img src="static/images/historyandheritage.avif" alt="History">
+                    <h3>History and Heritage</h3>
+                    <p>Discover the stories that shaped civilizations.</p>
+                </li>
+                <li class="list-item">
+                    <img src="static/images/festival.jpg" alt="Festivals">
+                    <h3>Festivals and Traditions</h3>
+                    <p>Celebrate the vibrancy of local customs.</p>
+                </li>
+                <li class="list-item">
+                    <img src="static/images/architecture.jpg" alt="Architecture">
+                    <h3>Art and Architecture</h3>
+                    <p>Marvel at breathtaking monuments and creative art forms.</p>
+                </li>
+                <li class="list-item">
+                    <img src="static/images/cusine.webp" alt="Cuisine">
+                    <h3>Cuisine</h3>
+                    <p>Savor the unique flavors of local gastronomy.</p>
+                </li>
+                <li class="list-item">
+                    <img src="static/images/coldplay.avif" alt="Music">
+                    <h3>Music and Dance</h3>
+                    <p>Experience the rhythm of cultural traditions.</p>
+                </li>
+                <li class="list-item">
+                    <img src="static/images/mosque.webp" alt="Religion">
+                    <h3>Religion and Spirituality</h3>
+                    <p>Learn about sacred practices and beliefs.</p>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Recommendations Section -->
+        <section>
+            <div class="section-header">
+                <h2>Recommended Reads</h2>
+                <p>Dive deeper into the culture through books and movies.</p>
+            </div>
+            <ul class="list">
+                <li class="list-item">
+                    <img src="static/images/book.jpeg" alt="Book">
+                    <h3>Travel Books</h3>
+                    <p>Explore titles that capture the essence of a destination.</p>
+                </li>
+                <li class="list-item">
+                    <img src="static/images/documentry.jpeg" alt="Movie">
+                    <h3>Documentaries</h3>
+                    <p>Watch films that bring cultures to life.</p>
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 WanderWise. All rights reserved.</p>
+    </footer>
+</body>
+</html>

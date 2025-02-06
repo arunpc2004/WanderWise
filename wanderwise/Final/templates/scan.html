@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signboard Translator</title>
+    <style>
+        body {
+            font-family: 'Book Antiqua', serif;
+            margin: 0;
+            padding: 0;
+            background-color: #F9F9F9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        h1 {
+            text-align: center;
+            color: #E85A4F;
+            margin-top: 20px;
+        }
+
+        h2 {
+            color: #E98074;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 30px auto;
+            padding: 20px;
+            background: #D8C3A5;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        label {
+            font-weight: bold;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        input[type="file"], select {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0 20px;
+            border-radius: 5px;
+            border: 1px solid #E85A4F;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 12px;
+            background-color: #E85A4F;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            font-weight: bold;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #E98074;
+        }
+
+        #webcam {
+            text-align: center;
+            margin-top: 20px;
+            border: 1px solid #E85A4F;
+            border-radius: 8px;
+            background-color: #EAE7DC;
+            padding: 20px;
+            display: none; /* Initially hidden */
+        }
+
+        video {
+            width: 50%;
+            border-radius: 3px;
+            margin-bottom: 5px;
+            border: 2px solid #E85A4F;
+        }
+
+        button {
+            padding: 10px 15px;
+            background-color: #E98074;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #E85A4F;
+        }
+
+        h3 {
+            color: red; /* Error text color */
+        }
+
+        footer {
+            text-align: center;
+            margin: 20px 0;
+            padding: 10px;
+            background-color: #D8C3A5; /* Consistent background color */
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>Signboard Translator</h1>
+
+    <!-- File Upload Form -->
+    <form action="/scan" method="post" enctype="multipart/form-data">
+        <label for="image">Upload Image:</label>
+        <input type="file" name="image" accept="image/*" required><br><br>
+        
+        <label for="language">Select Language to Translate To:</label>
+        <select name="language" required>
+            <option value="en">English</option>
+            <option value="es">Spanish</option>
+            <option value="fr">French</option>
+            <option value="de">German</option>
+            <option value="it">Italian</option>
+            <option value="ml">Malayalam</option>
+            <option value="hi">Hindi</option>
+            <option value="kn">Kannada</option>
+            <!-- Add more languages as needed -->
+        </select><br><br>
+
+        <input type="submit" value="Translate">
+    </form>
+
+    <!-- Webcam Capture Section -->
+    <h2>Use Webcam to Capture Image</h2>
+    <button id="startWebcamButton">Start Webcam</button><br><br>
+
+    <div id="webcam">
+        <video id="videoElement" autoplay></video><br>
+        <button id="captureButton">Capture Image</button>
+    </div>
+
+    <!-- Placeholder for extracted and translated text -->
+    {% if extracted_text %}
+        <h2>Extracted Text:</h2>
+        <p>{{ extracted_text }}</p>
+        <h2>Translated Text:</h2>
+        <p>{{ translated_text }}</p>
+    {% endif %}
+
+    {% if error %}
+        <h3 style="color:red;">Error: {{ error }}</h3>
+    {% endif %}
+
+    <!-- JavaScript to handle webcam functionality -->
+    <script>
+        const videoElement = document.getElementById('videoElement');
+        const webcamDiv = document.getElementById('webcam');
+
+        // Start the webcam
+        document.getElementById('startWebcamButton').addEventListener('click', function() {
+            navigator.mediaDevices.getUserMedia({ video: true })
+                .then(function(stream) {
+                    videoElement.srcObject = stream;
+                    webcamDiv.style.display = 'block'; // Show webcam div
+                })
+                .catch(function(err) {
+                    console.error("Error accessing webcam: " + err);
+                });
+        });
+
+        // Capture image from the webcam
+        document.getElementById('captureButton').addEventListener('click', function() {
+            const canvas = document.createElement('canvas');
+            canvas.width = videoElement.videoWidth;
+            canvas.height = videoElement.videoHeight;
+            const context = canvas.getContext('2d');
+            context.drawImage(videoElement, 0, 0);
+
+            // Convert canvas to data URL and send it to the server
+            const imageData = canvas.toDataURL('image/png');
+            
+            // Create a form data object to send the image
+            const formData = new FormData();
+            formData.append('image', dataURLtoBlob(imageData)); // Convert data URL to Blob
+            formData.append('language', document.querySelector('select[name="language"]').value); // Get selected language
+
+            // Send the image data to the server
+            fetch('/scan', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.text())
+            .then(data => {
+                document.body.innerHTML = data; // Replace body content with server response
+            })
+            .catch(error => console.error("Error:", error));
+        });
+
+        // Convert Data URL to Blob
+        function dataURLtoBlob(dataURL) {
+            const byteString = atob(dataURL.split(',')[1]);
+            const mimeString = dataURL.split(',')[0].split(':')[1].split(';')[0];
+            const ab = new ArrayBuffer(byteString.length);
+            const ia = new Uint8Array(ab);
+            
+            for (let i = 0; i < byteString.length; i++) {
+                ia[i] = byteString.charCodeAt(i);
+            }
+            
+            return new Blob([ab], { type: mimeString });
+        }
+    </script>
+
+    <footer>
+        <p>&copy; 2024 TravelEase. All rights reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Reviews - WanderWise</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* General Styling */
+        body {
+            font-family: 'Book Antiqua', serif;
+            background-color: #EAE7DC;
+            color: #8E8D8A;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background: #D8C3A5;
+            border-bottom: 1px solid #E85A4F;
+        }
+
+        header .logo {
+            font-size: 24px;
+            color: #E98074;
+            font-weight: bold;
+        }
+
+        nav a {
+            color: #8E8D8A;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        nav a:hover {
+            color: #E85A4F;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 80px 20px;
+            background: #EAE7DC;
+        }
+
+        .hero h1 {
+            font-size: 50px;
+            margin-bottom: 20px;
+            color: #E85A4F;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: #8E8D8A;
+        }
+
+        /* Reviews Section */
+        .reviews {
+            padding: 60px 20px;
+            background-color: #EAE7DC;
+        }
+
+        .reviews h2 {
+            font-size: 36px;
+            margin-bottom: 40px;
+            color: #E98074;
+            text-align: center;
+        }
+
+        .review-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            justify-content: center;
+        }
+
+        .review-item {
+            width: 300px;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .review-item:hover {
+            transform: scale(1.05);
+        }
+
+        .review-item h3 {
+            font-size: 18px;
+            color: #E85A4F;
+            margin-bottom: 10px;
+        }
+
+        .review-item p {
+            font-size: 14px;
+            color: #8E8D8A;
+            line-height: 1.5;
+        }
+
+        /* Review Form */
+        .review-form {
+            margin-top: 60px;
+            text-align: center;
+        }
+
+        .review-form h3 {
+            font-size: 24px;
+            color: #E98074;
+            margin-bottom: 20px;
+        }
+
+        .review-form form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .review-form input, 
+        .review-form textarea, 
+        .review-form button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #D8C3A5;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .review-form button {
+            background-color: #E85A4F;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .review-form button:hover {
+            background-color: #E98074;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #D8C3A5;
+            color: #333;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        footer p {
+            font-size: 16px;
+            color: #8E8D8A;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">WanderWise</div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="cultural-insights.html">Cultural Insights</a>
+            <a href="must-visit.html">Must-Visit Spots</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>User Reviews</h1>
+        <p>Share your travel experiences and explore stories from fellow adventurers.</p>
+    </section>
+
+    <section class="reviews">
+        <h2>What Travelers Are Saying</h2>
+        <div class="review-list">
+            <!-- Review 1 -->
+            <div class="review-item">
+                <h3>John Doe</h3>
+                <p>"Exploring the Grand Canyon was a breathtaking experience! Thanks to WanderWise for helping me plan."</p>
+            </div>
+            <!-- Review 2 -->
+            <div class="review-item">
+                <h3>Jane Smith</h3>
+                <p>"The cultural insights section is incredible. I learned so much about the history of Santorini."</p>
+            </div>
+            <!-- Review 3 -->
+            <div class="review-item">
+                <h3>Michael Brown</h3>
+                <p>"I found a perfect travelmate for my Iceland trip. Watching the Northern Lights together was magical!"</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="review-form">
+        <h3>Leave a Review</h3>
+        <form action="submit-review.html" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <textarea name="review" rows="5" placeholder="Share your experience" required></textarea>
+            <button type="submit">Submit Review</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>© 2024 WanderWise. All rights reserved.</p>
+    </footer>
+</body>
+</html>
