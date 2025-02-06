@@ -69,8 +69,8 @@ pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tessera
 Download and install Tesseract OCR: Tesseract OCR
 After installation, update the path to Tesseract in app.py:
 pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
-
-Features Implementation
+---
+## Features Implementation
 1. Image Language Translation
 •	Users can upload an image containing text.
 •	The image is processed using OpenCV to enhance its quality.
@@ -86,23 +86,26 @@ Features Implementation
 The platform offers cultural insights based on the current travel destination, helping users explore the historical and cultural significance of locations.
 4. Travelmate Finder
 A feature that connects like-minded travelers, allowing them to share experiences and plan together during their trips.
-
-API Integration
+---
+## API Integration
 •	Google Vision API: Used for text extraction from images.
 •	Google Translator API: Provides real-time text translation in multiple languages.
 •	OpenWeatherMap API: Fetches weather data for the travel destination.
 •	Speech Recognition API: Converts speech to text.
 •	gTTS API: Converts translated text back to speech.
+---
+## Running the Application
 
-Running the Application
 Once you've set up the environment and installed all dependencies, run the application using:
-bash
-CopyEdit
 python app.py
 This will start a Flask server at http://localhost:5000. You can access features like text scanning, voice translation, cultural insights, and more directly through the web interface.
+---
+## Conclusion
 
-Conclusion
 WanderWise brings together language translation, cultural knowledge, and social connectivity to enhance the travel experience. The platform bridges communication gaps, promotes cultural understanding, and connects travelers from around the world. By integrating cutting-edge technologies such as OCR, speech recognition, and AI-driven language translation, it creates a seamless experience for users.
-Future Updates:
+
+---
+
+## Future Updates:
 •	Offline functionality for real-time translation.
 •	Mobile app version for a broader reach.
